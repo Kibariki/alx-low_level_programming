@@ -11,24 +11,24 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-    int index = 0, dest_len = 0;
+	int index = 0, dest_len = 0;
 
-    /* Calculate the length of the destination string */
-    while (dest[index])
-    {
-        dest_len++;
-        index++;
-    }
+	/* Calculate the length of the destination string */
+	while (dest[index])
+	{
+		dest_len++;
+		index++;
+	}
 
-    /* Concatenate up to n bytes from the source string */
-    for (index = 0; src[index] && index < n; index++)
-    {
-        dest[dest_len] = src[index];
-        dest_len++;
-    }
+	/* Concatenate up to n bytes from the source string */
+	for (index = 0; src[index] && index < n; index++)
+	{
+		dest[dest_len] = src[index];
+		dest_len++;
+	}
 
-    /* Add null terminator to the concatenated string */
-    dest[dest_len] = '\0';
+	/* Add null terminator to the concatenated string */
+	dest[dest_len] = '\0';
 
-    return dest;
+	return (dest);
 }
